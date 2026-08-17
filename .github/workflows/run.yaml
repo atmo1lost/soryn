@@ -1,4 +1,4 @@
-name: ARK-5
+name: soryn
 on:
   push:
     branches:
@@ -15,11 +15,11 @@ jobs:
         run: |
           apk add clang build-base automake autoconf zlib-dev python3 zip curl unzip sudo
 
-      - name: Cloning and Building lastest pspsdk
+      - name: cloning and building lastest pspsdk
         run: | 
           git clone https://github.com/pspdev/pspsdk
 
-      - name: Bootstrap sdk and build
+      - name: bootstrap sdk and build
         working-directory: pspsdk
         run: |
           bash ./bootstrap
@@ -27,26 +27,26 @@ jobs:
           make
           make install
 
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v4 
         with:
           submodules: recursive
 
-      - name: Update psp-cfw-sdk
+      - name: update psp-cfw-sdk
         run: curl -OJL "https://github.com/pspdev/psp-cfw-sdk/releases/download/latest/psp-cfw-sdk.zip"
       
-      - name: Extract psp-cfw-sdk
+      - name: extract psp-cfw-sdk
         run: sudo unzip -o psp-cfw-sdk.zip -d /
 
-      - name: Build
+      - name: build
         run:  make clean && make 
 
-      - name: Compress
+      - name: compress
         run: |
           cd dist
           zip -r ../ARK-5.zip .
       
-      - name: Upload
+      - name: upload
         uses: actions/upload-artifact@v4
         with:
           name: ark-release

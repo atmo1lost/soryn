@@ -1,18 +1,18 @@
-# ARK-5
-Next Generation Custom Firmware for PSP and Vita's ePSP.
+# soryn
+a modern custom firmware for the PSP and vitas ePSP.
 
-## Download and Installation
+## download and installation [not soryn **yet**]
 - Go here: https://github.com/PSP-Arkfive/FasterARK/
 
-## Building
-- Requires the very `latest pspsdk` development build found here: https://github.com/pspdev/pspdev/releases/tag/latest
-- Requires the latest `psp-cfw-sdk` package: https://github.com/pspdev/psp-cfw-sdk/
+## building
+- requires the very `latest pspsdk` development build found here: https://github.com/pspdev/pspdev/releases/tag/latest
+- requires the latest `psp-cfw-sdk` package: https://github.com/pspdev/psp-cfw-sdk/
 
-## Features
+## features
 
-- Compiled with `latest PSPSDK`.
-- Easier installation and usage.
-- Better Plugin Management in the XMB.
-- True overclocking for all PSP models, except PS Vita.
-- Improved memory management for consoles with extra ram.
-- Lots of under-the-hood fixes and improvements.
+- compiled with `latest PSPSDK`.
+- easier installation and usage.
+- better Plugin Management in the XMB.
+- true overclocking for all PSP models, except PS Vita.
+- improved memory management for consoles with extra ram.
+- lots of under-the-hood fixes and improvements.

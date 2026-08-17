@@ -203,6 +203,9 @@ static int processConfigLine(char* runlevel, char* path, char* enabled){
         config.vshregion = (opt)?r:0;
         return 1;
     }
+    else if (strcasecmp(path, "soryn:secret") == 0){ 
+    // intentionally empty
+    }
     return 0;
 }
 

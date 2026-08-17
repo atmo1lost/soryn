@@ -183,7 +183,7 @@ int sctrlSEGetDiscType(void)
 
 int sctrlSEGetVersion()
 {
-    return ARK_MAJOR_VERSION;
+    return SORYN_MAJOR_VERSION;
 }
 
 int sctrlSEMountUmdFromFile(char *file, int noumd, int isofs){

@@ -55,13 +55,13 @@ int sctrlHENApplyMemory(u32 p2) // stub (to be highjacked and implemented by com
 // Get HEN Version
 int sctrlHENGetVersion()
 {
-    return ARK_MINOR_VERSION;
+    return SORYN_MINOR_VERSION;
 }
 
 // Get HEN Minor Version
 int sctrlHENGetMinorVersion()
 {
-    return ARK_MICRO_VERSION;
+    return SORYN_MICRO_VERSION;
 }
 
 int sctrlHENIsSE()

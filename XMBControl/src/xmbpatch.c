@@ -104,6 +104,7 @@ enum{
     QA_FLAGS,
     GO_PAUSE_DELETE,
     RESET_SETTINGS,
+    SORYN_SECRET,
 };
 
 enum {
@@ -263,37 +264,38 @@ char* plugins_install_options[] = {
 
 XmbControlItem xmbitems[] =
 {
-    { SYSTEM_OPTIONS      +PLUGINS_CONTEXT+2, 0, "System Options" },
-    { ACTIVATE_CODECS     +PLUGINS_CONTEXT+2, 0, "Activate Flash and WMA Codecs" },
-    { USB_DEVICE          +PLUGINS_CONTEXT+2, 0, "USB Device" },
-    { USB_READONLY        +PLUGINS_CONTEXT+2, 0, "USB Read-Only" },
-    { USB_CHARGE          +PLUGINS_CONTEXT+2, 0, "USB Charge" },
-    { CPU_CLOCK_GAME      +PLUGINS_CONTEXT+2, 0, "CPU Clock in Game" },
-    { CPU_CLOCK_VSH       +PLUGINS_CONTEXT+2, 0, "CPU Clock in XMB" },
-    { WPA2_SUPPORT        +PLUGINS_CONTEXT+2, 0, "WPA2 Support" },
-    { AUTOBOOT_LAUNCHER   +PLUGINS_CONTEXT+2, 0, "Autoboot Launcher" },
-    { USE_EXTRA_MEM       +PLUGINS_CONTEXT+2, 0, "Use Extra Memory" },
-    { MEM_STICK_SPEEDUP   +PLUGINS_CONTEXT+2, 0, "Memory Stick Speedup" },
-    { INFERNO_CACHE       +PLUGINS_CONTEXT+2, 0, "Inferno Cache" },
-    { DISABLE_GO_PAUSE    +PLUGINS_CONTEXT+2, 0, "Disable PSP Go Pause" },
-    { OLD_GO_PLUGINS      +PLUGINS_CONTEXT+2, 0, "Old Plugins on ef0" },
-    { NO_HIB_DELETE       +PLUGINS_CONTEXT+2, 0, "Prevent hibernation deletion on PSP Go" },
-    { SKIP_LOGOS          +PLUGINS_CONTEXT+2, 0, "Skip Sony logos" },
-    { HIDE_PICS           +PLUGINS_CONTEXT+2, 0, "Hide PIC0 and PIC1" },
-    { HIDE_MAC            +PLUGINS_CONTEXT+2, 0, "Hide MAC Address" },
-    { HIDE_DLC            +PLUGINS_CONTEXT+2, 0, "Hide DLC" },
-    { DISABLE_LED         +PLUGINS_CONTEXT+2, 0, "Turn off LEDs" },
-    { DISABLE_UMD         +PLUGINS_CONTEXT+2, 0, "Disable UMD Drive" },
-    { DISABLE_EF0         +PLUGINS_CONTEXT+2, 0, "Disable Internal Storage"},
-    { DISABLE_ANALOG      +PLUGINS_CONTEXT+2, 0, "Disable Analog Stick" },
-    { VITA_MUTE           +PLUGINS_CONTEXT+2, 0, "Vita-style mute" },
-    { UMD_REGION          +PLUGINS_CONTEXT+2, 0, "UMD Region" },
-    { VSH_REGION          +PLUGINS_CONTEXT+2, 0, "VSH Region" },
-    { CONFIRM_BUTTON      +PLUGINS_CONTEXT+2, 0, "Confirm Button" },
-    { BATTERY_CONVERT     +PLUGINS_CONTEXT+2, 0, "Battery Convert" },
-    { QA_FLAGS            +PLUGINS_CONTEXT+2, 0, "QA Flags" },
-    { GO_PAUSE_DELETE     +PLUGINS_CONTEXT+2, 0, "Delete PSP Go Pause" },
-    { RESET_SETTINGS      +PLUGINS_CONTEXT+2, 0, "Reset Settings" },
+    { SYSTEM_OPTIONS      +PLUGINS_CONTEXT+2, 0, "system options" },
+    { ACTIVATE_CODECS     +PLUGINS_CONTEXT+2, 0, "activate flash and WMA codecs" },
+    { USB_DEVICE          +PLUGINS_CONTEXT+2, 0, "usb device" },
+    { USB_READONLY        +PLUGINS_CONTEXT+2, 0, "usb read-only" },
+    { USB_CHARGE          +PLUGINS_CONTEXT+2, 0, "usb charge" },
+    { CPU_CLOCK_GAME      +PLUGINS_CONTEXT+2, 0, "cpu clock in game" },
+    { CPU_CLOCK_VSH       +PLUGINS_CONTEXT+2, 0, "cpu clock in XMB" },
+    { WPA2_SUPPORT        +PLUGINS_CONTEXT+2, 0, "WPA2 support" },
+    { AUTOBOOT_LAUNCHER   +PLUGINS_CONTEXT+2, 0, "autoboot launcher" },
+    { USE_EXTRA_MEM       +PLUGINS_CONTEXT+2, 0, "use extra memory" },
+    { MEM_STICK_SPEEDUP   +PLUGINS_CONTEXT+2, 0, "memory stick speedup" },
+    { INFERNO_CACHE       +PLUGINS_CONTEXT+2, 0, "inferno cache" },
+    { DISABLE_GO_PAUSE    +PLUGINS_CONTEXT+2, 0, "disable PSP Go pause" },
+    { OLD_GO_PLUGINS      +PLUGINS_CONTEXT+2, 0, "old plugins on ef0" },
+    { NO_HIB_DELETE       +PLUGINS_CONTEXT+2, 0, "prevent hibernation deletion on PSP Go" },
+    { SKIP_LOGOS          +PLUGINS_CONTEXT+2, 0, "skip Sony logos" },
+    { HIDE_PICS           +PLUGINS_CONTEXT+2, 0, "hide PIC0 and PIC1" },
+    { HIDE_MAC            +PLUGINS_CONTEXT+2, 0, "hide MAC address" },
+    { HIDE_DLC            +PLUGINS_CONTEXT+2, 0, "hide dlc" },
+    { DISABLE_LED         +PLUGINS_CONTEXT+2, 0, "turn off leds" },
+    { DISABLE_UMD         +PLUGINS_CONTEXT+2, 0, "disable umd drive" },
+    { DISABLE_EF0         +PLUGINS_CONTEXT+2, 0, "disable internal storage"},
+    { DISABLE_ANALOG      +PLUGINS_CONTEXT+2, 0, "disable analog stick" },
+    { VITA_MUTE           +PLUGINS_CONTEXT+2, 0, "vita-style mute" },
+    { UMD_REGION          +PLUGINS_CONTEXT+2, 0, "umd region" },
+    { VSH_REGION          +PLUGINS_CONTEXT+2, 0, "vsh region" },
+    { CONFIRM_BUTTON      +PLUGINS_CONTEXT+2, 0, "confirm button" },
+    { BATTERY_CONVERT     +PLUGINS_CONTEXT+2, 0, "battery convert" },
+    { QA_FLAGS            +PLUGINS_CONTEXT+2, 0, "qa flags" },
+    { GO_PAUSE_DELETE     +PLUGINS_CONTEXT+2, 0, "delete PSP Go pause" },
+    { RESET_SETTINGS      +PLUGINS_CONTEXT+2, 0, "reset settings" },
+    { SORYN_SECRET        +PLUGINS_CONTEXT+2, 0, "<3 from soryn - atmoss" },
 };
 
 struct {
@@ -335,6 +337,7 @@ struct {
     ITEM_OPT(boolean_settings), // QA Flags
     ITEM_OPT(boolean_settings4), // PSP Go Pause Delete
     ITEM_OPT(boolean_settings4), // Reset Settings
+    {0, NULL}, // secret
 };
 
 typedef struct {
@@ -1139,7 +1142,7 @@ void OnInitMenuPspConfigPatched()
         if (((u32*)sysconf_option)[2] == 0)
         {
             if (has_classic_plugins()){
-                AddSysconfContextItem("Import Classic Plugins", NULL, "Import Classic Plugins");
+                AddSysconfContextItem("import classic plugins", NULL, "import classic plugins");
             }
             loadPlugins();
             findInstallablePlugins();
@@ -1186,7 +1189,7 @@ SceSysconfItem *GetSysconfItemPatched(void *a0, void *a1)
         }
     }
     else if (is_cfw_config == 2){
-        if (strcmp(item->text, "Import Classic Plugins") == 0){
+        if (strcmp(item->text, "import classic plugins") == 0){
             context_mode = PLUGINS_CONTEXT-1;
         }
         else if (strncmp(item->text, "iplugin_", 8) == 0){
@@ -1209,23 +1212,23 @@ wchar_t *scePafGetTextPatched(void *a0, char *name)
             char* star = NULL;
             if (!translated){
                 if(strcmp(name, "xmbmsgtop_sysconf_configuration") == 0){
-                    translated = "Custom Firmware Settings";
+                    translated = "custom firmware settings";
                     star = STAR;
                 }
                 else if(strcmp(name, "xmbmsgtop_sysconf_plugins") == 0){
-                    translated = "Plugins Manager";
+                    translated = "plugins manager";
                     star = STAR;
                 }
                 else if(strcmp(name, "xmbmsgtop_custom_launcher") == 0){
-                    translated = "Custom Launcher";
+                    translated = "custom launcher";
                     star = STAR;
                 }
                 else if(strcmp(name, "xmbmsgtop_custom_app") == 0){
-                    translated = "Custom App";
+                    translated = "custom app";
                     star = STAR;
                 }
                 else if(strcmp(name, "xmbmsgtop_150_reboot") == 0){
-                    translated = "Reboot to 1.50 ARK";
+                    translated = "reboot to 1.50 soryn";
                     star = STAR;
                 }
                 else if (isTranslatableString(name))
@@ -1272,7 +1275,7 @@ wchar_t *scePafGetTextPatched(void *a0, char *name)
                 utf8_to_unicode((wchar_t *)user_buffer, plugins_paths[plugin->place]);
         		return (wchar_t *)user_buffer;
             }
-            else if (strcmp(name, "Import Classic Plugins") == 0){
+            else if (strcmp(name, "import classic plugins") == 0){
                 char* translated = findTranslation(name);
                 utf8_to_unicode((wchar_t *)user_buffer, (translated)? translated:name);
                 return (wchar_t *)user_buffer;
@@ -1288,7 +1291,7 @@ wchar_t *scePafGetTextPatched(void *a0, char *name)
         else if (strcmp(name, "msg_system_update") == 0 && se_config.custom_update)
         {
             char* translated = findTranslation("xmbmsg_system_update");
-            if (!translated) translated = "ARK Updater";
+            if (!translated) translated = "soryn updater";
             utf8_to_unicode((wchar_t *)user_buffer, translated);
         	return (wchar_t *)user_buffer;
         }
@@ -1356,7 +1359,7 @@ int vshGetRegistryValuePatched(u32 *option, char *name, void *arg2, int size, in
 
         }
         else if (is_cfw_config == 2){
-            if (strcmp(name, "Import Classic Plugins") == 0){
+            if (strcmp(name, "import classic plugins") == 0){
                 *value = config.import_plugins;
                 context_mode = PLUGINS_CONTEXT-1;
                 return 0;
@@ -1480,12 +1483,15 @@ int vshSetRegistryValuePatched(u32 *option, char *name, int size, int *value)
                             sctrlKernelExitVSH(NULL);
                         }
                     }
+                    else if (i == SORYN_SECRET){
+                        // does nothing
+                    }
                     return 0;
                 }
             }
         }
         else if (is_cfw_config == 2){
-            if (strcmp(name, "Import Classic Plugins") == 0){
+            if (strcmp(name, "import classic plugins") == 0){
                 config.import_plugins = *value;
                 context_mode = PLUGINS_CONTEXT-1;
                 import_classic_plugins(0, *value);

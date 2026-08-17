@@ -1,9 +1,9 @@
-#ifndef ARK_VERSION_H
-#define ARK_VERSION_H
+#ifndef SORYN_VERSION_H
+#define SORYN_VERSION_H
 
 // ARK Version
-#define ARK_MAJOR_VERSION 5
-#define ARK_MINOR_VERSION 1
-#define ARK_MICRO_VERSION 0
+#define SORYN_MAJOR_VERSION 5
+#define SORYN_MINOR_VERSION 1
+#define SORYN_MICRO_VERSION 0
 
 #endif
