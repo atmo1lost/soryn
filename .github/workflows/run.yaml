@@ -45,13 +45,13 @@ jobs:
       - name: compress
         run: |
           cd dist
-          zip -r ../ARK-5.zip .
+          zip -r ../soryn.zip .
       
       - name: upload
         uses: actions/upload-artifact@v4
         with:
-          name: ark-release
-          path: ARK-5.zip
+          name: soryn-release
+          path: soryn.zip
   release:
     needs: build
     runs-on: ubuntu-latest
@@ -59,15 +59,15 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v8
         with:
-          name: ark-release
+          name: soryn-release
           path: .
       - name:
         uses: softprops/action-gh-release@v3
         with:
           tag_name: latest
-          name: ARK-5 pre-release
+          name: soryn pre-release
           prerelease: true
-          files: ARK-5.zip
+          files: soryn.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
