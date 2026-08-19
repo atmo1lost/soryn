@@ -1291,7 +1291,7 @@ wchar_t *scePafGetTextPatched(void *a0, char *name)
         else if (strcmp(name, "msg_system_update") == 0 && se_config.custom_update)
         {
             char* translated = findTranslation("xmbmsg_system_update");
-            if (!translated) translated = "soryn updater";
+            if (!translated) translated = "soryn Updater";
             utf8_to_unicode((wchar_t *)user_buffer, translated);
         	return (wchar_t *)user_buffer;
         }
@@ -1485,6 +1485,7 @@ int vshSetRegistryValuePatched(u32 *option, char *name, int size, int *value)
                     }
                     else if (i == SORYN_SECRET){
                         // does nothing
+                        (void)0;
                     }
                     return 0;
                 }
